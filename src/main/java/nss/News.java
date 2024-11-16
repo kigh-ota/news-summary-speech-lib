@@ -2,4 +2,5 @@ package nss;
 
 import java.util.Date;
 
-public record News(String title, String description, String uri, Date publishedDate) {}
+public record News(
+    String title, String description, String uri, Date publishedDate, Category category) {}

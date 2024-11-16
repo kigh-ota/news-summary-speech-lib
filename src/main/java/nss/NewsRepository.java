@@ -8,5 +8,5 @@ public interface NewsRepository {
   int saveAll(List<News> newsList);
 
   // Retrieve all when null
-  List<News> listPublishedAfter(Date date);
+  List<News> listPublishedAfter(Date date, Category category);
 }
