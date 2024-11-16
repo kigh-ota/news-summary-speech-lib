@@ -5,5 +5,5 @@ import java.util.List;
 
 @FunctionalInterface
 public interface Summarizer {
-  Summary summarize(Date oldestNewDate, Category category);
+  Summary summarize(Date oldestNewsDate, Category category);
 }
