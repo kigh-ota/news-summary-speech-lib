@@ -1,6 +1,28 @@
 plugins {
-    java
+    `java-library`
+    `maven-publish`
     id("com.diffplug.spotless") version "7.0.0.BETA4"
+}
+
+group = "news-summary-speech"
+version = "0.0.1"
+
+publishing {
+    publications {
+        create<MavenPublication>("default") {
+            from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            name = "news-summary-speech-lib"
+            url = uri("https://maven.pkg.github.com/kigh-ota/news-summary-speech-lib")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
 
 repositories {
