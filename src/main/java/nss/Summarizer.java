@@ -1,8 +1,9 @@
 package nss;
 
+import java.util.Date;
 import java.util.List;
 
 @FunctionalInterface
 public interface Summarizer {
-  Summary summarize(List<News> newsList);
+  Summary summarize(Date newestNewsDate, Date oldestNewDate, Category category);
 }
