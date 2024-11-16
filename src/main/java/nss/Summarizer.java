@@ -1,7 +1,6 @@
 package nss;
 
 import java.util.Date;
-import java.util.List;
 
 @FunctionalInterface
 public interface Summarizer {
