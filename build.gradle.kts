@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "news-summary-speech"
-version = "0.0.8"
+version = "0.0.10"
 
 publishing {
     publications {
