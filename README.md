@@ -5,7 +5,6 @@ This is a Java library for news summarization and text-to-speech conversion, pub
 ## Build System & Commands
 
 **Build:** `./gradlew build`  
-**Test:** `./gradlew test`  
 **Format code:** `./gradlew spotlessApply`  
 **Check formatting:** `./gradlew spotlessCheck`  
 **Publish:** `./gradlew publish` (requires GITHUB_ACTOR and GITHUB_TOKEN env vars)
@@ -16,7 +15,7 @@ The codebase follows a clean architecture with distinct layers:
 
 ### Core Domain Models (in `nss` package)
 - **News:** Record containing title, description, URI, publishedDate, and category
-- **Summary:** Complex record with structured content (paragraphs with URIs), metadata (dates, category, newsCount)
+- **Summary:** Complex record with structured content (paragraphs with URIs), metadata (dates, category, newsCount, generatedWith)
 - **SummarySpeech:** Interface providing access to audio stream via `get()` method
 - **Category:** Functional interface for news categorization
 
@@ -36,10 +35,4 @@ The Summary model uses nested records:
 
 - **Java Version:** 21 (configured via toolchain)
 - **Code Formatting:** Google Java Format via Spotless plugin
-- **Testing:** JUnit 5 with AssertJ for assertions
 - **Build Tool:** Gradle with Kotlin DSL
-
-## Testing
-
-Tests use JUnit Platform and should be placed in `src/test/java`. Run single test class with:
-`./gradlew test --tests "ClassName"`
