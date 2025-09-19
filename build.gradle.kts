@@ -31,7 +31,7 @@ repositories {
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.3")
-    testImplementation("org.assertj:assertj-core:3.26.3")
+    testImplementation("org.assertj:assertj-core:3.27.5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
